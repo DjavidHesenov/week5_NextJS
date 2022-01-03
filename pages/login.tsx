@@ -17,11 +17,6 @@ const Home: NextPage = () => {
 
     const submitHandler = () => {
         if (email && password) {
-            // const newLogin: IUser = {
-            //     email: email,
-            //     password: password
-            // }
-
             dispatch(authActions.login())
             router.push('/')
         }
