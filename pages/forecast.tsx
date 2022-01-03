@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { NextPage } from 'next'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
+import MainLayout from '../components/MainLayout'
 
 const api = {
     key: "667fa688b47f6b6f9b610d0e80f0775a",
@@ -23,7 +24,6 @@ const NavBar: NextPage = () => {
                 .then(result => {
                     setWeather(result);
                     setQuery('');
-                    console.log(result);
                 });
         }
     }
@@ -49,7 +49,7 @@ const NavBar: NextPage = () => {
 
 
     return (
-        <>
+        <MainLayout title="Weather Forecast">
             <nav className="flex items-center justify-between flex-wrap bg-blue-500 p-6">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <span className="font-semibold text-2xl tracking-tight">Weather Forecast NextJS App</span>
@@ -118,7 +118,7 @@ const NavBar: NextPage = () => {
                     </table>
                 ) : ('')}
             </main>
-        </>
+        </MainLayout>
     )
 }
 

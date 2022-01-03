@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { authActions } from '../store/auth'
 import Link from 'next/link'
 
+
 const Home: NextPage = () => {
     const router = useRouter()
 
